@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>smurf-it</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="shorcut icon" href="imgs/smurf-it_fav.png">
+</head>
+<body>
+
+    <!--New header with mobile  -->
+    <header class="header">
+      <div class="logo-container">
+        <a href="index.html"><img src="imgs/smurf-it_logo.png" alt=""></a>
+      </div>
+      <nav class="nav-bar">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#accounts">Accounts</a></li>
+          <li><a href="#about-us">About Us</a></li>
+          <!-- <li><a href="#">Buy Now!</a></li> -->
+          <li><a href="#contact-form" class="header_btn">Buy Now!</a></li>
+        </ul>
+      </nav>
+      <div class="menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="mobile-menu">
+        <nav class="mobile-nav">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#accounts">Accounts</a></li>
+            <li><a href="#about-us">About Us</a></li>
+            <li><a href="#contact-form" class="header_btn">Buy Now!</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+
+    <!-- Old header class without mobile -->
+    <!-- <header class="header">
+        <div class="logo-container">
+            <a href="index.html"><img src="imgs/smurf-it_logo.png" alt=""></a>
+        </div>
+        <nav class="nav-bar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#accounts">Accounts</a></li>
+                <li><a href="#about-us">About Us</a></li>
+                <li><a href="#contact-form" class="header_btn">Buy Now!</a></li>
+            </ul>
+        </nav>
+    </header> -->
+
+    <!-- Hero section -->
+    <div class="hero">
+        <div class="container">
+          <h2>Welcome to <span>smurf-it!</span></h2>
+          <p>We offer high-quality and secure accounts for all your needs.<br>Get yours now!</p>
+          <a href="#contact-form" class="btn btn-primary">Buy Now!</a>
+        </div>
+      </div>
+
+      <!--    Account types -->
+      <section class="accounts" id="accounts">
+        <h2 class="accounts-heading">Account Types</h2>
+        <div class="account-container">
+          <div class="account">
+      <!-- 				<img src="league-of-legends-account.png" alt="League of Legends Account Icon"> -->
+            <h3 class="account-heading">EUNE</h3>
+            <p class="account-paragraph" >Unlock new champions and skins with our premium League of Legends accounts for EUNE server.</p>
+          </div>
+          <div class="account">
+      <!-- 				<img src="league-of-legends-account.png" alt="League of Legends Account Icon"> -->
+            <h3 class="account-heading">EUW</h3>
+            <p class="account-paragraph" >Unlock new champions and skins with our premium League of Legends accounts for EW server.</p>
+          </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Us -->
+      
+      <section id="about-us" class="about-us">
+        <div class="container">
+          <h2>About Us</h2>
+          <p>We are a team of experienced professionals dedicated to providing safe and secure accounts to our customers. With years of experience, we have developed the best methods for ensuring account security and customer satisfaction.</p>
+        </div>
+      </section>
+
+
+
+
+    <section class="features" id="why-us">
+        <h2 class="features-heading">Why Choose <span>smurf-it?</span></h2>
+        <div class="feature-container">
+          <div class="feature">
+            <i class="fas fa-shield-alt"></i>
+            <h3 class="feature-heading">Secure</h3>
+            <p class="feature-paragraph">Our accounts are thoroughly vetted and tested to ensure they meet the highest security standards.</p>
+          </div>
+    
+          <div class="feature">
+            <i class="fas fa-trophy"></i>
+            <h3 class="feature-heading">High-Quality</h3>
+            <p class="feature-paragraph">We only offer accounts that meet our strict quality standards, so you can be sure you're getting a great product.</p>
+          </div>
+    
+          <div class="feature">
+            <i class="fas fa-user-friends"></i>
+            <h3 class="feature-heading">Easy to Use</h3>
+            <p class="feature-paragraph">Our purchasing process is simple and straightforward, so you can get your new account up and running quickly.</p>
+          </div>
+
+
+          <div class="feature">
+            <i class="fas fa-payments"></i>
+            <h3 class="feature-heading">Secure Payment</h3>
+            <p class="feature-paragraph">We use industry-standard payment gateways to ensure your transactions are safe and secure.</p>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="cta">
+        <div class="container">
+          <h2 class="cta__title">Ready to get started?</h2>
+          <a href="#contact-form" class="btn btn--secondary">Yes, I am</a>
+        </div>
+      </section>
+
+
+
+
+      <!-- Contact us Form -->
+
+      <form class="contact-form"  id="contact-form"
+            action="https://formspree.io/f/xqkojevz"
+            method="POST">
+        <h2 class="form-header">Contact us</h2>
+      
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" class="form-control">
+        </div>
+      
+        <div class="form-group">
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" class="form-control"></textarea>
+        </div>
+      
+        <button  type="button" onclick="sumbitForm()" class="btn btn-contact">Submit</button>
+        <!-- <a href="#" class="btn btn-contact">Submit</a> -->
+      </form>
+
+      <script>  
+        //Sumbit the form data
+        
+        function sumbitForm()
+        {
+          document.querySelector(".contact-form").submit();
+
+          alert("Thank you, we will be with as soon as possible!");
+        }
+
+
+        const menuBtn = document.querySelector(".menu-btn");
+        const mobileMenu = document.querySelector(".mobile-menu");
+        const navLinks = document.querySelectorAll(".mobile-nav li a");
+
+        let menuOpen = false;
+        menuBtn.addEventListener("click", () => {
+          if (!menuOpen) {
+            menuBtn.classList.add("open");
+            mobileMenu.classList.add("show");
+            menuOpen = true;
+          } else {
+            menuBtn.classList.remove("open");
+            mobileMenu.classList.remove("show");
+            menuOpen = false;
+          }
+        });
+
+        navLinks.forEach((link) => {
+          link.addEventListener("click", () => {
+            menuBtn.classList.remove("open");
+            mobileMenu.classList.remove("show");
+            menuOpen = false;
+          });
+        });
+
+      </script>
+
+
+    <!-- <section class="about-us">
+        <div class="container">
+          <h2>About Us</h2>
+          <p>We are a team of professionals dedicated to providing secure and reliable accounts for all your needs. Our goal is to make the process as easy and stress-free as possible for our customers.</p>
+        </div>
+      </section> -->
+
+      <footer>
+        <div class="footer-logo">
+          <div>
+            <img src="imgs/smurf-it_logo.png" alt="">
+            <p class="footer-paragraph">&copy; 2023 smurf-it. All Rights Reserved.</p>
+          </div>
+        </div>
+      </footer>
+    
+</body>
+</html>
+
+
